@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<p>sayi gir ve ok a bas</p>
+
+<input id="id1" type="number" min="100">
+<button onclick="myFunction()">OK</button>
+
+<p>sayi min  100 olmalı</p>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var txt = "";
+        if (document.getElementById("id1").validity.rangeUnderflow) {
+            txt = "değer çok küçük";
+        } else {
+            txt = "giriş tmam";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
+</body>
+</html>
+
+

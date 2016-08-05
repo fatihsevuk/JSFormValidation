@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name="inputForm" onsubmit="return myFunction()">
+
+    <input type="number" name="sayi" id="sayi" max="100"/>
+    <br>
+    <button onclick="myFunction()">OK</button>
+
+<p id="pid"></p>
+</form>
+
+<script>
+
+
+    function myFunction(){
+
+
+
+        var x=document.getElementById("sayi").value;
+
+        if(x.validity.rangeOverflow){
+            alert("sayi 100 den büyük olamaz");
+            document.getElementById("pid").innerHTML="değer 100 den büyük olamaz";
+            return false;
+        }
+
+
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
